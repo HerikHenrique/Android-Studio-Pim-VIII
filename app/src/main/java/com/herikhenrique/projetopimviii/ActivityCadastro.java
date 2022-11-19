@@ -28,7 +28,7 @@ public class ActivityCadastro extends AppCompatActivity {
         telefone = findViewById(R.id.telefone);
         dao = new PessoaDAO(this);
     }
-    protected void salvar(View view){
+    public void salvar(View view){
         Pessoa pessoaInserida = new Pessoa();
         pessoaInserida.setNome(nomePessoa.getText().toString());
         pessoaInserida.setCpf(cpf.getText().toString());
