@@ -15,7 +15,7 @@ public class Conexao extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table aluno(id integer primary key autoincrement, " +
-                "nome varchar(50), cpf long(50), endereco varchar(100), telefones varchar(50)," +
+                "nome varchar(50), cpf long(50), endereco varchar(100), telefone varchar(50)," +
                 "FOREIGN KEY(endereco) REFERENCES endereco(endereco), " +
                 "FOREIGN KEY(telefone) REFERENCES telefones(telefone))");
         db.execSQL("create table endereco(id integer primary key autoincrement, " +
