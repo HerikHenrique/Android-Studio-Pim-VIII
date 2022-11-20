@@ -28,14 +28,14 @@ public class ActivityCadastro extends AppCompatActivity {
         telefone = findViewById(R.id.telefone);
         dao = new PessoaDAO(this);
     }
-    public void salvar(View view){
+    public void cadastrar(View view){
         Pessoa pessoaInserida = new Pessoa();
         pessoaInserida.setNome(nomePessoa.getText().toString());
         pessoaInserida.setCpf(cpf.getText().toString());
         pessoaInserida.setEndereco(endereco.getText().toString());
         pessoaInserida.setTelefone(telefone.getText().toString());
         long id = dao.inserir(pessoaInserida);
-        Toast.makeText(this, "Aluno inserido com id: " + id, Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "Pessoa inserido com id: " + id, Toast.LENGTH_SHORT).show();
 
     }
 }
